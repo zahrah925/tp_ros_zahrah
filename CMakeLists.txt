@@ -55,11 +55,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+#add_service_files(
+#  FILES
+#  geo_msg.msg
+#)
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -69,10 +68,11 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   geometry_msgs#   std_msgs
-# )
+#generate_messages(
+#  DEPENDENCIES
+#  geometry_msgs 
+#  std_msgs
+#)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -104,6 +104,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
+  #CATKIN_DEPENDS
+  #message_runtime
 #  INCLUDE_DIRS include
 #  LIBRARIES tp_ros_zahrah
 #  CATKIN_DEPENDS geometry_msgs roscpp rospy std_msgs
