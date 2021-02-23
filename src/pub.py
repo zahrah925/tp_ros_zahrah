@@ -15,15 +15,14 @@ def talker():
 
     message.header.frame_id="map"
 
-    a = 0
-    b = 0
-
     message.pose.position.x = 0
     message.pose.position.y = 0
+    a = 0
+    b = 0
  
     while not rospy.is_shutdown():
 
-	if(message.pose.position.x == -4 && message.pose.position.y == -4)
+	if(message.pose.position.x == 0 & message.pose.position.y == 0):
 		while(message.pose.position.y != 4):
 			message.pose.position.y = a
 			a = a + 1
@@ -36,15 +35,26 @@ def talker():
 			pub.publish(message)
 			rate.sleep()
 	
-	elif 
+	elif(message.pose.position.x == 4 & message.pose.position.y == 4):
+		while(message.pose.position.y != 0):
+			a = a - 1
+			message.pose.position.y = a
+			pub.publish(message)
+			rate.sleep()
+
+		while(message.pose.position.x != 0):
+			b = b - 1
+			message.pose.position.x = b
+			pub.publish(message)
+			rate.sleep()
 
 
 
 	
 	
     	
-	pub.publish(message)
-	rate.sleep()
+	#pub.publish(message)
+	#rate.sleep()
 
 if __name__ == '__main__':
      try:
