@@ -2,9 +2,9 @@
 
 ## Launch file that launch 2 nodes and rviz
 
-This package contains a launch file that will launch a publisher node, a button node and rviz.
-When the toggle button is pressed a square pattern is formed.
-And when the toggle button is pressed again the pattern will stop.
+-This package contains a launch file that will launch a publisher node, a button node and rviz.
+-When the toggle button is pressed a square pattern is formed.
+-And when the toggle button is pressed again the pattern will stop.
 
 > STEPS:
 
