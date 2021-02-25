@@ -1,8 +1,8 @@
 <launch>
-    <node pkg="tp_ros_zahrah" name="publisher" type="mix.py">
+    <node pkg="tp_ros_zahrah" name="publisher" type="mix.py"/>
 
-    <node pkg="button_gui" name="button_node" type="button_node.py">
-		<remap from="chatter" to="button_state"/>
+    <node pkg="button_gui" name="button_node" type="button_node.py" output="screen">
+	<remap from="button_state" to="chatter"/>
     </node>
 
 </launch>
